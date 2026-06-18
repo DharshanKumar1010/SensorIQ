@@ -1,0 +1,76 @@
+{
+  "autoencoder": {
+    "model_version": "lstm_autoencoder_v2",
+    "threshold": 0.0056184264831244946,
+    "pearson_corr": 0.13155184568673817,
+    "rul_bucket_stats": [
+      {
+        "bucket": "0\u201320",
+        "mean_score": 0.0071517350152134895,
+        "anomaly_rate": 0.8861788617886179,
+        "n_windows": 123
+      },
+      {
+        "bucket": "21\u201350",
+        "mean_score": 0.005565015133470297,
+        "anomaly_rate": 0.34076015727391873,
+        "n_windows": 763
+      },
+      {
+        "bucket": "51\u2013100",
+        "mean_score": 0.005445082206279039,
+        "anomaly_rate": 0.21187175043327555,
+        "n_windows": 2308
+      },
+      {
+        "bucket": "101\u2013150",
+        "mean_score": 0.005834097508341074,
+        "anomaly_rate": 0.2822004760645332,
+        "n_windows": 3781
+      },
+      {
+        "bucket": "150+",
+        "mean_score": 0.0061371722258627415,
+        "anomaly_rate": 0.3765911207699472,
+        "n_windows": 3221
+      }
+    ]
+  },
+  "isolation_forest": {
+    "model_version": "isolation_forest_v1",
+    "threshold": 0.4868272982827205,
+    "pearson_corr": -0.220346334077731,
+    "rul_bucket_stats": [
+      {
+        "bucket": "0\u201320",
+        "mean_score": 0.5608095526695251,
+        "anomaly_rate": 0.9512195121951219,
+        "n_windows": 123
+      },
+      {
+        "bucket": "21\u201350",
+        "mean_score": 0.4763690233230591,
+        "anomaly_rate": 0.3577981651376147,
+        "n_windows": 763
+      },
+      {
+        "bucket": "51\u2013100",
+        "mean_score": 0.4332384765148163,
+        "anomaly_rate": 0.048093587521663775,
+        "n_windows": 2308
+      },
+      {
+        "bucket": "101\u2013150",
+        "mean_score": 0.43162837624549866,
+        "anomaly_rate": 0.03226659613858768,
+        "n_windows": 3781
+      },
+      {
+        "bucket": "150+",
+        "mean_score": 0.4369409382343292,
+        "anomaly_rate": 0.05277864017385905,
+        "n_windows": 3221
+      }
+    ]
+  }
+}
