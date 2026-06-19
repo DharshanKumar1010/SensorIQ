@@ -1,15 +1,39 @@
+# Web framework
 fastapi==0.137.1
 uvicorn[standard]==0.49.0
+python-multipart==0.0.20
+
+# Database
 sqlalchemy==2.0.51
 asyncpg==0.31.0
 alembic==1.18.4
+
+# Config & validation
 pydantic==2.13.4
 pydantic-settings==2.14.1
+
+# Auth
 python-jose[cryptography]==3.5.0
 passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+
+# Utilities
 python-dotenv==1.2.2
 
-# testing
+# ML — data processing & models
+numpy==2.4.6
+pandas==2.3.3
+scikit-learn==1.9.0
+scipy==1.17.1
+cloudpickle==3.1.2
+mlflow==3.13.0
+matplotlib==3.10.3
+
+# PyTorch CPU — avoids pulling ~2 GB of CUDA libraries on Render
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.12.0+cpu
+
+# Testing
 httpx>=0.27
 pytest>=8.0
 pytest-asyncio>=0.24

@@ -1,0 +1,6 @@
+frontend/
+venv/
+data/raw/
+data/processed/
+mlruns/
+notebooks/

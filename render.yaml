@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: sensoriq-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      # Secrets — set these in the Render dashboard, do not commit values here
+      - key: DATABASE_URL
+        sync: false
+      - key: SECRET_KEY
+        sync: false
+      # Non-secret config
+      - key: ALGORITHM
+        value: HS256
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "30"
+      - key: MODEL_TYPE
+        value: autoencoder
+      - key: MODEL_VERSION
+        value: lstm_autoencoder_v2
+      - key: ANOMALY_THRESHOLD
+        value: "0.005618"
+      - key: MODEL_PATH
+        value: ./ml/artifacts/autoencoder.pt
+      - key: ISOLATION_MODEL_PATH
+        value: ./ml/artifacts/isolation_forest.pkl
+      - key: MLFLOW_TRACKING_URI
+        value: ./mlruns
